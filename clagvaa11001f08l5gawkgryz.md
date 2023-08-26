@@ -1,4 +1,14 @@
-# How to install Elasticsearch, Kibana and WinLogBeat in your CloudLab the lazy way
+---
+title: "How to install Elasticsearch, Kibana and WinLogBeat in your CloudLab the lazy way"
+seoTitle: "how-to-install-elasticsearch-and-kibana-on-aws-linux"
+datePublished: Mon Nov 14 2022 14:14:35 GMT+0000 (Coordinated Universal Time)
+cuid: clagvaa11001f08l5gawkgryz
+slug: how-to-install-elasticsearch-kibana-and-winlogbeat-in-your-cloudlab-the-lazy-way
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1668462914420/d7sQnDNR6.jpg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1668435225597/MWwjKulKg.jpg
+tags: hacking, homelab, blueteam
+
+---
 
 # Overview
 
