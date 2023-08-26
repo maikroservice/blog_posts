@@ -1,4 +1,13 @@
-# Hack The Box Arctic - Walkthrough
+---
+title: "Hack The Box Arctic - Walkthrough"
+datePublished: Mon Nov 29 2021 15:25:57 GMT+0000 (Coordinated Universal Time)
+cuid: ckwktpwjo0giwgns1940m7kn0
+slug: hack-the-box-arctic-walkthrough
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1638191848280/mBJJ3-ucT.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1638199543097/0b-LblyLH.png
+tags: hacking
+
+---
 
 Welcome to the first walkthrough on this blog - Today we will focus on Arctic - a Windows Box that will test your methodology and gives you a chance to grow as a penetration tester / ethical hacker. 
 
