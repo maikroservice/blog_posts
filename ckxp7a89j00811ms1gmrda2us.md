@@ -1,4 +1,12 @@
-# The 10 ways hackers use to download files on Windows
+---
+title: "The 10 ways hackers use to download files on Windows"
+datePublished: Mon Dec 27 2021 21:36:27 GMT+0000 (Coordinated Universal Time)
+cuid: ckxp7a89j00811ms1gmrda2us
+slug: the-10-ways-hackers-use-to-download-files-on-windows
+cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/K4c8RymNeu8/upload/v1652287820192/V4xLSg8XaH.jpeg
+tags: hacking, cybersecurity-1, cybersec
+
+---
 
 ## Welcome to another episode of, Defender is blocking me and I don't like it. 
 Your therapist says - Have you thought about AMSI, maybe that one is the problem?
