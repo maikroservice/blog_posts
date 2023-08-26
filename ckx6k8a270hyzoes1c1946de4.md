@@ -1,4 +1,12 @@
-# Hack The Box Intelligence - Walkthrough
+---
+title: "Hack The Box Intelligence - Walkthrough"
+datePublished: Tue Dec 14 2021 20:31:14 GMT+0000 (Coordinated Universal Time)
+cuid: ckx6k8a270hyzoes1c1946de4
+slug: hack-the-box-intelligence-walkthrough
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1639513282330/2AdMNq7Nc.png
+tags: hacking, cybersecurity-1
+
+---
 
 Today we will walk through an intermediate difficulty box that shows us some nice to-know attack vectors for Windows and Active Directory in particular. 
 We will do a walkthrough of the box **Intelligence** from HackTheBox (https://app.hackthebox.com/machines/357).
