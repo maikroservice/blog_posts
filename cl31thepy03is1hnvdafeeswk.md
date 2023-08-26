@@ -1,4 +1,13 @@
-# Hacking Interviews #1 - traceroute - How does it work?
+---
+title: "Hacking Interviews #1 - traceroute - How does it work?"
+seoTitle: "how does traceroute work - hacking interview answer"
+datePublished: Wed May 11 2022 16:49:40 GMT+0000 (Coordinated Universal Time)
+cuid: cl31thepy03is1hnvdafeeswk
+slug: traceroute-how-does-it-work
+cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/GRxTDmbsJRM/upload/v1652287501112/FBefy1vtv.jpeg
+tags: interview, programming, security, hacking
+
+---
 
 Imagine you are working on a penetration test and you want to know how packets are traveling through the network. You want to identify routers and potentially other subnets, what tool do you use?
 
