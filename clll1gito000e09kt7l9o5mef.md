@@ -1,5 +1,5 @@
 ---
-title: "How to connect wazuh and discord - a Step-By-Step Guide."
+title: "How to connect wazuh and discord: a Step-By-Step Guide."
 datePublished: Mon Aug 21 2023 15:35:15 GMT+0000 (Coordinated Universal Time)
 cuid: clll1gito000e09kt7l9o5mef
 slug: how-to-connect-wazuh-and-discord-a-step-by-step-guide
