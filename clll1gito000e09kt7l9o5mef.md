@@ -1,8 +1,8 @@
 ---
-title: "How to connect wazuh and discord"
+title: "How to connect wazuh and discord - a Step-By-Step Guide."
 datePublished: Mon Aug 21 2023 15:35:15 GMT+0000 (Coordinated Universal Time)
 cuid: clll1gito000e09kt7l9o5mef
-slug: how-to-connect-wazuh-and-discord
+slug: how-to-connect-wazuh-and-discord-a-step-by-step-guide
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/nsJeucVd7E0/upload/f552d36d7b23c1e6f6ff5a495638bc62.jpeg
 tags: security, hacking, cybersecurity
 
