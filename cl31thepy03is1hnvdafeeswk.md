@@ -1,5 +1,5 @@
 ---
-title: "Hacking Interviews #1 - traceroute - How does it work?"
+title: "How traceroute works"
 seoTitle: "how does traceroute work - hacking interview answer"
 datePublished: Wed May 11 2022 16:49:40 GMT+0000 (Coordinated Universal Time)
 cuid: cl31thepy03is1hnvdafeeswk
