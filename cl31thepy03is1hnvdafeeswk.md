@@ -13,17 +13,17 @@ Imagine you are working on a penetration test and you want to know how packets a
 
 `traceroute` to the rescue!
 
-## traceroute or tracert?
+## Summary
 
-`traceroute` and its windows equivalent `tracert` work with the ICMP (Windows) or UDP protocol (Linux & Mac). It is generally used to follow the way packets travel through a network. 
+`traceroute` and its windows equivalent `tracert` work with the `ICMP` (Windows) or `UDP` protocol (Linux & Mac). It is generally used to follow the way packets travel through a network.
 
-The software sends out packets with a TTL of 1 first and awaits the Type 11 - TTL exceeded response, then sends out packets with a TTL of 2 and does the same again. This loop continues until either the destination is found, or the max was reached TTL (differs from implementations, common TTLs are 128 for Windows and 64 for most Mac/Linux machines). 
+The software sends out packets with a Time To Live (TTL) of 1 first and awaits the `Type 11 - TTL exceeded` response, then sends out packets with a TTL of 2 and does the same again. This loop continues until either the destination is found, or the max TTL was reached (differs from implementations, common TTLs are 128 for Windows and 64 for Mac/Linux).
 
-Traceroute then displays the time it took for the packets to go out and “come back” - round-trip-time. 
+Traceroute then displays the time it took for the packets to go out and “come back” - the round-trip time.
 
-When prepping for an interview this answer might suffice, you can stop reading now. 
+When prepping for an interview this answer might suffice, you can stop reading now.
 
-If you are still interested in more depth knowledge - strap in, its gonna be a wild ride. 
+If you are still interested in more depth knowledge - strap in, its gonna be a wild ride.
 
 FYI: We will use `traceroute` as the synonym for both traceroute and tracert for the rest of this post.
 
@@ -35,39 +35,39 @@ Quick divergence to what TTL actually is - a TTL is the amount of hops (routers)
 
 ### What does that mean?
 
-imagine you have a Windows machine and a typical TTL for packets is 128, so that means that this packet we just send can travel by 127 routers before the final router discards the packet. 
+imagine you have a Windows machine and a typical TTL for packets is 128, so that means that this packet we just send can travel by 127 routers before the final router discards the packet.
 
-Actually, discarding the package is not completely correct - what happens is that the final router sends an ICMP (TTL Exceeded) back to the origin, we can simulate this with a specific flag (`-m` for mac, `-t`  for linux) - this seems to be independent of the original request - even when we send a UDP request, we get a TTL exceeded back via ICMP. 
+Actually, discarding the package is not completely correct - what happens is that the final router sends an ICMP (TTL Exceeded) back to the origin, we can simulate this with a specific flag (`-m` for mac, `-t` for linux) - this seems to be independent of the original request - even when we send a UDP request, we get a TTL exceeded back via ICMP.
 
 ### Diving deep into packets and protocols with a fake shark fin on our head 🦈
 
-Lets prototype something - first we use traceroute of the classical IP used for testing if the internet is on 🔥 - 8.8.8.8 (google). 
+Lets prototype something - first we use traceroute of the classical IP used for testing if the internet is on 🔥 - 8.8.8.8 (google).
 
-We deliberately set the TTL to 1 to make sure that we don’t get far, not even out to the internet, this packet is under home arrest and gets stopped at my local router (192.168.0.1). 
-
+We deliberately set the TTL to 1 to make sure that we don’t get far, not even out to the internet, this packet is under home arrest and gets stopped at my local router (192.168.0.1).
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1652287393296/GkAXL-KTw.png align="left")
 
-We can ask our friend wireshark to show us exactly the requests that were send and received, so lets check what the router returned. 
+We can ask our friend wireshark to show us exactly the requests that were send and received, so lets check what the router returned.
 
 ### Request from my machine to 8.8.8.8
+
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1652287407465/Wwg-_lkfn.png align="left")
 
-There is a lot to unpack here. 
+There is a lot to unpack here.
 
-First we see that my local IP is 192.168.0.44, the destination is 8.8.8.8 as we specified. We can also see that we used the UDP protocol to the remote port `33435` and locally we listen on `41101`. Additionally, 24 bytes of 0’s are send and I am still trying to figure out why. 
+First we see that my local IP is 192.168.0.44, the destination is 8.8.8.8 as we specified. We can also see that we used the UDP protocol to the remote port `33435` and locally we listen on `41101`. Additionally, 24 bytes of 0’s are send and I am still trying to figure out why.
 
 ### Response from my router to my machine
+
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1652287425981/LMBCSMqbnE.png align="left")
 
-Once my router has received the packet, reduced the TTL by 1 and it made the unfortunate realisation that this packet needs to stop and return to sender pronto because the TTL is 0 now. Therefore, it mirrors the original request and adds ICMP headers of `TTL exceeded`. 
+Once my router has received the packet, reduced the TTL by 1 and it made the unfortunate realisation that this packet needs to stop and return to sender pronto because the TTL is 0 now. Therefore, it mirrors the original request and adds ICMP headers of `TTL exceeded`.
 
 One potentially important note is that traceroute likes to measure response times and tells us how much time passed between sending the request.
 
-When we inspect the previous command again we can see that we have 3 response times - why though? 
+When we inspect the previous command again we can see that we have 3 response times - why though?
 
-This is because for each TTL-change 3 packets get send by traceroute and the durations we see here are the round-trip-times for the individual packets. 
-
+This is because for each TTL-change 3 packets get send by traceroute and the durations we see here are the round-trip-times for the individual packets.
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1652287451629/UhnVJ17dW.png align="left")
 
