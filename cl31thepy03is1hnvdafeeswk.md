@@ -1,9 +1,9 @@
 ---
-title: "How traceroute works"
-seoTitle: "how does traceroute work - hacking interview answer"
+title: "How does traceroute work"
+seoTitle: "how does traceroute work"
 datePublished: Wed May 11 2022 16:49:40 GMT+0000 (Coordinated Universal Time)
 cuid: cl31thepy03is1hnvdafeeswk
-slug: traceroute-how-does-it-work
+slug: how-does-traceroute-work
 cover: https://cdn.hashnode.com/res/hashnode/image/unsplash/GRxTDmbsJRM/upload/v1652287501112/FBefy1vtv.jpeg
 tags: interview, programming, security, hacking
 
