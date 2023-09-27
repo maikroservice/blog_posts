@@ -1,8 +1,8 @@
 ---
-title: "Setting Up Wazuh as Your SIEM on Debian & Proxmox: A Step-by-Step Guide"
+title: "Setting Up Wazuh as Your SIEM on Debian 12 & Proxmox: A Step-by-Step Guide"
 datePublished: Fri Aug 25 2023 13:07:03 GMT+0000 (Coordinated Universal Time)
 cuid: cllqlxc82000209l194wsd4kj
-slug: setting-up-wazuh-as-your-siem-on-debian-proxmox-a-step-by-step-guide
+slug: setting-up-wazuh-as-your-siem-on-debian-12-proxmox-a-step-by-step-guide
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/qTEj-KMMq_Q/upload/1bd7fa129391f19deeab61f033351654.jpeg
 tags: hacking, cybersecurity-1, siem, soc-analyst
 
