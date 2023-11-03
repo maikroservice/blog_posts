@@ -1,8 +1,8 @@
 ---
-title: "Step-by-Step Guide to Setting Up Snort as Your HomeLab IDS with wazuh (SIEM) Integration"
+title: "Step-by-Step Guide to Setting Up Snort as Your HomeLab IDS with wazuh (SIEM) Integration in 2023"
 datePublished: Mon Oct 16 2023 20:50:26 GMT+0000 (Coordinated Universal Time)
 cuid: clntddkgr000109l747ak1bsu
-slug: step-by-step-guide-to-setting-up-snort-as-your-homelab-ids-with-wazuh-siem-integration
+slug: step-by-step-guide-to-setting-up-snort-as-your-homelab-ids-with-wazuh-siem-integration-in-2023
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1697489421689/33197e07-f5a9-4014-865b-0baba52f8f89.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1697489406887/2ed83a9c-09b2-40af-ac4e-89f582811bf6.png
 tags: hacking, cybersecurity-1, homelab
