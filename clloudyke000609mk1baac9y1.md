@@ -180,9 +180,9 @@ Sure.
 
 Looking at the AS-REP in Wireshark shows us that there is a section called “Kerberos”
 
-This one holds the AS-REP section → a part called “ticket”
+This one holds the AS-REP section → a part called `ticket`
 
-Another one called cname - the account that requested the ticket (maikroservice), and crealm aka domain (snackempire.home)
+Another one called cname - the account (`CNameString`) that requested the ticket (maikroservice), and `crealm` aka domain (snackempire.home)
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692861281906/cde1d9a6-589c-44b8-bfc5-e97105a49eaf.png align="center")
 
@@ -192,7 +192,7 @@ Wonderful, now we have a Ticket Granting Ticket or as I like to call it “acces
 
 For all the defenders and curious people out there:
 
-The request for an access ticket generates an event with ID 4768 on the domain controller.
+The request for an access ticket generates an event with `ID 4768` on the domain controller.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692861295965/ab733c59-8ae8-4646-9157-6e5f1abcc40a.png align="center")
 
@@ -213,10 +213,6 @@ These are often called silver- or service tickets but we can think of them as �
 
 Concerning some of the possible services we can ask them for - 👀 ⬇️
 
-Ooofff... That's a lot.
-
-Ok, slowly!
-
 ## Ticket Granting Service Tickets Types (Silver Tickets)
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692861328018/9f3d1a7e-772e-4df4-8e88-9fb8413650c3.png align="center")
@@ -230,6 +226,10 @@ Ok, slowly!
 `LDAP` - remote server administration → remote control
 
 `KRBTGT` - GOLDEN TICKET 🎫 → VIP ALL ACCESS PASS 😎🎉
+
+Ooofff... That's a lot.
+
+Ok, slowly!
 
 Ok but what's the process like?!
 
@@ -251,6 +251,6 @@ This triggers a Windows Security Event #4769 which might be helpful when hunting
 
 With the ride ticket in hand, we can now access the theme park and specific rides 🎢 or request a new ride ticket with our access ticket 🎟️
 
-In the next post we walk through RDP and what happens on a packet level.
+In one of the next posts we walk through RDP and what happens on a packet level.
 
 Stay tuned.
