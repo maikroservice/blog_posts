@@ -2,7 +2,7 @@
 title: "Step-By-Step Guide to setup Identity Management for wazuh with authentik"
 datePublished: Thu Nov 09 2023 20:56:47 GMT+0000 (Coordinated Universal Time)
 cuid: cloro65zv000108l93wsj8hyl
-slug: identity-management-in-wazuh-with-authentik
+slug: identity-management-wazuh-and-authentik
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1699526068023/0fd774fa-208c-4052-ba5c-ef0091a6cc16.png
 tags: hacking, cybersecurity-1, blueteam, siem
 
