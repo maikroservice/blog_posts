@@ -8,7 +8,7 @@ tags: hacking, cybersecurity-1, blueteam, siem
 
 ---
 
-Centralized Identity Management when done right gives you and your users the freedom to only remember one password to login multiple services - single sign-on coupled with Multi-Factor Authentication (MFA) increases security - but... how would you start?
+Centralized Identity Management when done right gives you and your users the freedom to only remember one password to login to multiple services - single sign-on coupled with Multi-Factor Authentication (MFA) increases security - but... how would you start?
 
 # Getting started with Identity Management
 
@@ -221,9 +221,9 @@ The lines that are variable are -
     * you now need to change ownership and rights on the file to make sure it is properly usable by wazuh / secure
         
     * ```bash
-              chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
-              
-              chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                
+                chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
         ```
         
 * `idp.entity_id` - if you followed this guide it is `wazuh-saml` - you can also see it in the metadata file
