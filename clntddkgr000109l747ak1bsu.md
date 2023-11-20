@@ -58,15 +58,14 @@ sudo apt-get install snort -y
 
 Once the prerequesites are installed snort will ask you to configure the starting setup properly - the first thing you have to do is enter your local network that needs scanning.
 
-You need to use the CIDR notation, if you are unsure what that is ask your favorite search engine or GPT buddy for support with \`subnetting\` - or leave me a comment and I will try to answer as many as possible!
+You need to use the CIDR notation, if you are unsure what that is ask your favorite search engine or GPT buddy for support with `subnetting` - or leave me a comment and I will try to answer as many as possible!
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697455945812/0a52ce18-fbd2-4f92-8d1f-1f2e325c8294.png align="center")
 
-Once that is done make sure to check if snort was installed properly by running `snort -v` - if you receive `bash: snort: command not found` make sure you are in a privileged context (e.g. \`sudo snort -v\` or \`su - && snort -v\`).
+Once that is done make sure to check if snort was installed properly by running `snort -v` - if you receive `bash: snort: command not found` make sure you are in a privileged context (e.g. `sudo snort -v` or `su - && snort -v`).
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697456423913/2accd354-1d44-40cb-842e-85323edc6ff4.png align="center")
 
-  
 Great, that was the installation process of snort - you did very well 🤘.
 
 Now we need some configuration to make sure snort works properly.
