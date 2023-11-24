@@ -214,6 +214,38 @@ The first file that we have to adjust is `/etc/wazuh-indexer/opensearch-security
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1699556780873/7eca678f-a701-4495-80be-1cbb117a85c5.png align="center")
 
+```yaml
+authc:
+  basic_internal_auth_domain:
+    description: Authenticate SAML against internal users database"
+    http_enabled: true
+    transport_enabled: true 
+    order: 0
+    http_authenticator:
+      type: basic 
+      challenge: false
+    authentication_backend:
+      type: intern 
+  saml_auth_domain:
+    http_enabled: true
+    transport_enabled: false
+    order: 1
+    http_authenticator:
+      type: saml 
+      challenge: true
+      config: 
+        idp:
+          metadata_file: "/etc/wazuh-indexer/opensearch-security/idp-metadata.xml"
+          entity_id: "wazuh-saml"
+        sp:
+          entity_id: "wazuh-saml"
+        kibana_url: "https://<YOUR_WAZUH_IP_HOSTNAME>/"
+        roles_key: Roles
+        exchange_key: "MIIGBDCCA+SQs..."
+     authentication_backend:
+       type: noop
+```
+
 The lines that are variable are -
 
 * `idp.metadata_file` - the location/name you gave the downloaded `metadata.xml` file - I would recommend putting it in `/etc/wazuh-indexer/opensearch-security/` and naming it `idp-metadata.xml`.
@@ -221,9 +253,9 @@ The lines that are variable are -
     * you now need to change ownership and rights on the file to make sure it is properly usable by wazuh / secure
         
     * ```bash
-                chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
-                
-                chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                  chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                  
+                  chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
         ```
         
 * `idp.entity_id` - if you followed this guide it is `wazuh-saml` - you can also see it in the metadata file
