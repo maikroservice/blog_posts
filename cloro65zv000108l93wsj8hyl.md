@@ -217,7 +217,7 @@ The first file that we have to adjust is `/etc/wazuh-indexer/opensearch-security
 ```yaml
 authc:
   basic_internal_auth_domain:
-    description: Authenticate SAML against internal users database"
+    description: "Authenticate SAML against internal users database"
     http_enabled: true
     transport_enabled: true 
     order: 0
@@ -242,8 +242,8 @@ authc:
         kibana_url: "https://<YOUR_WAZUH_IP_HOSTNAME>/"
         roles_key: Roles
         exchange_key: "MIIGBDCCA+SQs..."
-     authentication_backend:
-       type: noop
+    authentication_backend:
+      type: noop
 ```
 
 The lines that are variable are -
@@ -253,9 +253,9 @@ The lines that are variable are -
     * you now need to change ownership and rights on the file to make sure it is properly usable by wazuh / secure
         
     * ```bash
-                  chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
-                  
-                  chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                    chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                    
+                    chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
         ```
         
 * `idp.entity_id` - if you followed this guide it is `wazuh-saml` - you can also see it in the metadata file
