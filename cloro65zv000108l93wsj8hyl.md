@@ -250,12 +250,12 @@ The lines that are variable are -
 
 * `idp.metadata_file` - the location/name you gave the downloaded `metadata.xml` file - I would recommend putting it in `/etc/wazuh-indexer/opensearch-security/` and naming it `idp-metadata.xml`.
     
-    * you now need to change ownership and rights on the file to make sure it is properly usable by wazuh / secure
+    * keep in mind that you need to change ownership and rights on the file to make sure it is properly usable by wazuh
         
     * ```bash
-                    chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
-                    
-                    chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                      chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
+                      
+                      chmod 640 /etc/wazuh-indexer/opensearch-security/idp-metadata.xml
         ```
         
 * `idp.entity_id` - if you followed this guide it is `wazuh-saml` - you can also see it in the metadata file
