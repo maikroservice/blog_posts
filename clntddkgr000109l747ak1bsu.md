@@ -148,7 +148,7 @@ Rules are stored under `/etc/snort/rules` - the one we are looking for is called
 We need to add the following line:
 
 ```bash
-alert icmp any any -> any any (msg:"ICMP connection attempt:"; sid:1000010: rev:1;)
+alert icmp any any -> any any (msg:"ICMP connection attempt:"; sid:1000010; rev:1;)
 ```
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697458652770/49143a23-191c-41ef-805e-4581df0c57a9.png align="center")
