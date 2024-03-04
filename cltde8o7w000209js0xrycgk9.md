@@ -3,6 +3,7 @@ title: "Malware Analysis I - Detecting Indicators of Compromise and malicious In
 datePublished: Mon Mar 04 2024 20:28:33 GMT+0000 (Coordinated Universal Time)
 cuid: cltde8o7w000209js0xrycgk9
 slug: malware-analysis-i-detecting-indicators-of-compromise-and-malicious-infrastructure
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1709584202285/677aac4c-0cf3-4dfa-8df6-344051596984.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1709584018492/6855758a-dee5-4fab-9cd1-6a2096c99f4b.png
 tags: hacking, cybersecurity-1, threat-intelligence, malware-analysis
 
