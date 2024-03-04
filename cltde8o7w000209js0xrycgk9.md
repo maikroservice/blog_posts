@@ -433,6 +433,8 @@ paste that into a new Powershell script (it’s convenient to use powershell ISE
 
 The output will be shown in the blue window below ⬆️
 
+# Stage 3 - Stego Base64
+
 If you prettify this script into a more human readable format you will get this 3rd stage payload (I took the liberty to defang it by commenting the last three lines):
 
 ```powershell
@@ -536,6 +538,8 @@ Then you modify the stage3 PowerShell script to only isolate the base64 code:
 }
 ```
 
+## Stage 3.1 - binary download
+
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1709582830070/bb62ed05-d1ef-4285-9b76-0faa0982a326.png align="center")
 
 Then proceed to download the base64stage3.txt and plug it into cyberchef
@@ -593,6 +597,8 @@ Once that is done you should see a new entry in the `Assemblies` list on the lef
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1709583189102/766ecc6d-6f3d-4249-b16d-3d0325d5d29a.png align="center")
 
 We wont go into more details today but feel free to look around 🙂
+
+## last url
 
 Back to our stage3 payload → We have one more interesting url that we have not looked at yet:
 
