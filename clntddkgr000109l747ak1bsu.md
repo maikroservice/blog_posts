@@ -1,5 +1,5 @@
 ---
-title: "Step-by-Step Guide to Setting Up Snort as Your HomeLab IDS with wazuh (SIEM) Integration in 2023"
+title: "Step-by-Step Guide to Setting Up Snort as Your HomeLab IDS with wazuh (SIEM) Integration in 2024"
 datePublished: Mon Oct 16 2023 20:50:26 GMT+0000 (Coordinated Universal Time)
 cuid: clntddkgr000109l747ak1bsu
 slug: step-by-step-guide-to-setting-up-snort-as-your-homelab-ids-with-wazuh-siem-integration-in-2023
@@ -56,7 +56,69 @@ sudo apt-get install snort -y
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697455838361/d88b207d-2892-4221-a027-7f4678c9fd5b.png align="center")
 
-Once the prerequesites are installed snort will ask you to configure the starting setup properly - the first thing you have to do is enter your local network that needs scanning.
+<div data-node-type="callout">
+<div data-node-type="callout-emoji">💡</div>
+<div data-node-type="callout-text">UPDATE 2024: IF your terminal tells you that it is <code>unable to locate package snort</code> you need to add the ubuntu repository to your apt lists.</div>
+</div>
+
+### Adding the ubuntu repository to your apt lists
+
+If you see this:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729526252850/42bdf24b-7424-4a8f-abda-da1ecbd99286.png align="center")
+
+Fear not - we have a solution. Recently, debian appears to have removed snort from it’s repositories - so now we need to add a new repository manually to install snort (another option would be to install from source, but that is more brain-intensive and not part of this post).
+
+The first file you need to open is `/etc/apt/sources.list`. This file contains all the repositories that `apt` is able to query for packages. If you try to install one, which is not available, `apt` tells you that it cannot find the package.
+
+*AHHH, so that is what happened here?!*
+
+Exactly. Open the sources file e.g. with `vim` , `nano` or your favorite text editor (make sure you are using sudo rights or are logged in as root)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729527086236/cc98acc2-8c80-4ca2-867c-4d41e88fffc1.png align="center")
+
+and add the following line to the bottom:
+
+```plaintext
+deb http://de.archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
+```
+
+Afterwards, your sources.list should look something like this:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729527571881/d0f1e11a-cf8d-4373-9de1-fe658fd49335.png align="center")
+
+Great, close the file (make sure to save it!) and update your local apt cache by running `sudo apt-get update`
+
+*Umm… this fails?!*
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729527668995/6e32a2bb-d4b6-473c-913a-9713a196a8ab.png align="center")
+
+Aha! Apparently, it’s not as simple as adding this one line, we also need to add a public key so that our local system can verify the integrity of the remote apt cache.
+
+<div data-node-type="callout">
+<div data-node-type="callout-emoji">💡</div>
+<div data-node-type="callout-text">I highlighted the necessary public key identifier in the screenshot above (<code>871920D1991BC93C</code>), make sure you copy and paste the value you see in your terminal for the next command</div>
+</div>
+
+Lucky for us this is a single command where you need to add your public key identifier:
+
+```plaintext
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <the_public_key_identifier_you_copied>
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729526530040/7af8f075-726a-4c12-95bc-9f5a582ead01.png align="center")
+
+Wonderful, now try to update your apt cache again with: `sudo apt-get update`.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1729528005860/db855c9b-2564-4f85-87d5-7238306a2ac0.png align="center")
+
+BINGOOOOO. That worked, and now you can install snort with:
+
+```plaintext
+sudo apt-get install snort -y
+```
+
+Once the prerequesites are installed snort might ask you to configure the starting setup properly - the first thing you have to do is enter your local network that needs scanning.
 
 You need to use the CIDR notation, if you are unsure what that is ask your favorite search engine or GPT buddy for support with `subnetting` - or leave me a comment and I will try to answer as many as possible!
 
