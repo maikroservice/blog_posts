@@ -1,5 +1,6 @@
 ---
 title: "Step-by-Step Guide to Setting Up Snort as Your HomeLab IDS with wazuh (SIEM) Integration in 2024"
+seoTitle: "Set Up Snort IDS and add Wazuh Integration"
 datePublished: Mon Oct 16 2023 20:50:26 GMT+0000 (Coordinated Universal Time)
 cuid: clntddkgr000109l747ak1bsu
 slug: step-by-step-guide-to-setting-up-snort-as-your-homelab-ids-with-wazuh-siem-integration-in-2023
