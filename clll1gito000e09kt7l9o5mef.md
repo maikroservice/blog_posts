@@ -75,14 +75,14 @@ Copy the Webhook URL and save it for the next step.
 
 ## Register the integration in wazuh
 
-1. You need to register the integration in wazuh - for that to happen start wazuh, connect to the dashboard and visit the configuration area in the management tab.
+1. You need to register the integration in wazuh - for that to happen start wazuh, connect to the dashboard and visit the configuration area in the Server management section.
     
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692629414950/650ff1a6-7844-4051-ba25-eef95ca1d371.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738272690361/23e02c11-8290-43e4-9523-a7ff91667ce0.png align="center")
 
 Next in the top right click on `Edit configuration`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692629464787/704093b4-82dc-4afd-8cad-e5ee4d8f8d70.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738272724532/bb3e394b-24be-498c-bd64-a43029057233.png align="center")
 
 Now you are editing the `ossec.conf` located here `/var/ossec/etc/ossec.conf`
 
@@ -129,7 +129,7 @@ sudo chown root:wazuh /var/ossec/integrations/custom-*
 
 The folder should now look like this:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692694103540/00cb183e-57b5-49fe-a2b7-9cd1d73e3899.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738272805164/856aeb1f-ec4a-4263-b733-9c439a21c504.png align="center")
 
 Once that is done make sure that pip is setup correctly and has the `requests` library installed.
 
