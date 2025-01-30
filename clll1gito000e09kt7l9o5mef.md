@@ -106,9 +106,9 @@ When done correctly it should look like this:
 
 ### Add your discord webhook url
 
-The last step in the configuration section is to add the correct webhook url between `<hook_url>` and `</hook_url>`. Once that is done you need to click the `Save` button, it will take a little while and there will be a small popup once it is saved.
+The last step in the configuration section is to add the correct webhook url between `<hook_url>` and `</hook_url>`. Once that is done you need to click the `Save` button and then click on the `Restart Manager` button afterwards, it will take a little while and there will be a small popup once it is saved + restarted.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692630742438/5b6a6cf6-ca2d-4b6b-a485-affb5cf18e01.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738272903860/d1029620-2463-441b-b952-638cc5cda7cc.png align="center")
 
 Head to the terminal for the final two steps.
 
