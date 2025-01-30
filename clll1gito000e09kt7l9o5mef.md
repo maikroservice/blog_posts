@@ -106,11 +106,15 @@ When done correctly it should look like this:
 
 ### Add your discord webhook url
 
-The last step in the configuration section is to add the correct webhook url between `<hook_url>` and `</hook_url>`. Once that is done you need to click the `Save` button and then click on the `Restart Manager` button afterwards, it will take a little while and there will be a small popup once it is saved + restarted.
+The last step in the configuration section is to add the correct webhook url between `<hook_url>` and `</hook_url>`. Once that is done you need to click the `Save` button and then click on the `Restart Manager` button afterwards, You should see a popup asking you to confirm the operation - click on `Confirm`.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738272903860/d1029620-2463-441b-b952-638cc5cda7cc.png align="center")
 
-Head to the terminal for the final two steps.
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738273018234/e503b7c3-fada-4311-bc09-d8d785c7e323.png align="center")
+
+Once that is done - your wazuh instance will tell you that the manager is restarting and once the `Restarting Manager` button turns blue again you are good to continue to the terminal for the final two steps.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1738273025483/73fe4927-6a5c-4fbd-8490-073787f502b9.png align="center")
 
 ## Set up wazuh integration
 
